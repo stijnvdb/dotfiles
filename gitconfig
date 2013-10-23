@@ -1,0 +1,15 @@
+[user]
+	name = Stijn Vanden Brande
+	email = stijn.vanden.brande@wunderkraut.com
+[pack]
+	windowMemory = 256m
+[core]
+	exludesfile = ./.gitignore
+[alias]
+  br = branch
+  st = status
+  co = checkout
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
