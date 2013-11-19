@@ -5,6 +5,7 @@
 	windowMemory = 256m
 [core]
 	exludesfile = ./.gitignore
+	fileMode = false
 [alias]
   br = branch
   st = status

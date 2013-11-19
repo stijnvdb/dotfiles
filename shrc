@@ -37,10 +37,13 @@
         alias vre="vagrant reload"
         alias vst="vagrant status"
         alias vde="vagrant destroy -f"
-        alias dv="drush @vagrant"
-        alias dv1="drush @vagrant1"
-        alias dv1upwd="drush @vagrant1 upwd admin --password='admin'"
-        alias dv1cc="drush @vagrant1 cc all"
+        alias vcpu='cd ~/workspace/vagrant/ && git pull'
+        alias vcp='_() { cp -r ~/workspace/vagrant/$1/Vagrantfile .; cp -r ~/workspace/vagrant/$1/scripts . ; }; _'
+        alias vcp53='cp -r ~/workspace/vagrant/precise64lamp/Vagrantfile .; cp -r ~/workspace/vagrant/precise64lamp/scripts .;'
+        alias vcp52='cp -r ~/workspace/vagrant/squeeze64lamp52/Vagrantfile .; cp -r ~/workspace/vagrant/squeeze64lamp52/scripts .;'
+        alias dv="drush @vagrant1"
+        alias dvupwd="drush @vagrant1 upwd admin --password='admin'"
+        alias dvcc="drush @vagrant1 cc all"
 
 
     ### git
@@ -55,6 +58,9 @@
       alias gtl="git show-branch --all"
       alias pushall='for i in `git remote`; do git push $i; done;'
       alias pullall='for i in `git remote`; do git pull $i; done;'
+      alias gbrd="git branch -d"
+      alias gbrdr="git push origin --delete"
+      alias gfp="git fetch --prune"
 
     ### sublime text
       alias sub='subl . &'
@@ -63,6 +69,7 @@
       alias vbl="VBoxManage list vms"
       alias vbla="VBoxManage list runningvms"
       alias vblg="VBoxManage list vms | grep"
+      alias vbre="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 
   ## custom scripts
 
@@ -109,6 +116,9 @@
     alias line="printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -"
 
     alias st="clear && git status && svn status && vagrant status"
+
+  # Grep alias
+    alias grep="grep -rn --color --exclude-dir=.svn"
 
   ## navigation
     alias cdd="cd ~/Downloads/"

@@ -30,7 +30,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Config
 ## PATH
-export PATH=$PATH:/Users/stijn/bin/drush:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$PATH:/Users/stijn/bin:/Users/stijn/bin/drush:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 ## Plugins
 # Which plugins to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
