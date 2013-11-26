@@ -19,16 +19,11 @@
   ## command line tools
 
     ### drush
+        alias dvupwd="drush @vagrant1 upwd admin --password='admin'"
+        alias dvcc="drush @vagrant1 cc all"
+        alias dvup="dvupwd && dvcc"
 
-      #### local
-        alias dral="drush cc all"
-        alias dccd="drush cc drush"
-        alias drep="drush help | grep"
-        alias dron="drush cron"
-        alias drumr="drush rc repository"
-        alias drumd="drush rd"
-
-      #### vagrant
+    #### vagrant
         alias vlog="VAGRANT_LOG=INFO "
         alias vup="vagrant up"
         alias vssh="vagrant ssh"
@@ -42,8 +37,6 @@
         alias vcp53='cp -r ~/workspace/vagrant/precise64lamp/Vagrantfile .; cp -r ~/workspace/vagrant/precise64lamp/scripts .;'
         alias vcp52='cp -r ~/workspace/vagrant/squeeze64lamp52/Vagrantfile .; cp -r ~/workspace/vagrant/squeeze64lamp52/scripts .;'
         alias dv="drush @vagrant1"
-        alias dvupwd="drush @vagrant1 upwd admin --password='admin'"
-        alias dvcc="drush @vagrant1 cc all"
 
 
     ### git
