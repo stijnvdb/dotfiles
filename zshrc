@@ -62,8 +62,3 @@ if [ -f ~/.shrc ]; then
 else
   print "Error: ~/.shrc not found."
 fi
-
-# Bind Alt key
-bindkey -e
-bindkey '^[[1;9C' forward-word
-bindkey '^[[1;9D' backward-word
