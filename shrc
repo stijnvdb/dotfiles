@@ -123,6 +123,7 @@
     alias cpu="top -F -R -o cpu" # display top CPU processes
     alias io="iostat -w1" # disply disk i/o
 
+# Papertrail
 pt() { 
   if [[ $@ == *-h* ]] then;
     papertrail "$@"
