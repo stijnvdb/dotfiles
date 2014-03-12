@@ -66,24 +66,10 @@
 
   ## custom scripts
 
-    ### misc
-      alias death2svn="sh ~/Workspace/shell_scripts/death_to_svn.sh"
-      alias ndr="sh ~/Workspace/scripts/drupal_repo_structure_setup.sh"
-      alias tar+="sh ~/Workspace/shell_scripts/tar+.sh"
-      alias scp+="sh ~/Workspace/shell_scripts/scp+.sh"
-      # alias rm="sh ~/Workspace/shell_scripts/rm+.sh"
-
-    ### mamp # depracted
-      alias rms="sh ~/Workspace/scripts/wip/rum_multisite.sh"
-      alias mamp_info="sh ~/Workspace/shell_scripts/mamp_info.sh"
-      alias mamp_tail="sh ~/Workspace/shell_scripts/mamp_tail.sh"
-      alias tail+="sh ~/Workspace/shell_scripts/tail+.sh"
-      alias sqlp="sh ~/Workspace/shell_scripts/mysql_processlist.sh"
-
     ### vagrant
-      alias vafy1="cp -r ~/Workspace/Vagrant/vagrant-park/precise64lamp/Vagrantfile .; cp -r ~/Workspace/Vagrant/vagrant-park/precise64lamp/scripts ."
-      alias vafy2="cp -r ~/Workspace/Vagrant/vagrant-park/squeeze64lamp52/Vagrantfile .; cp -r ~/Workspace/Vagrant/vagrant-park/squeeze64lamp52/scripts ."
-
+      alias vafy1="cp -r ~/workspace/vagrant/precise64lamp/Vagrantfile .; cp -r ~/workspace/vagrant/precise64lamp/scripts ."
+      alias vafy2="cp -r ~/workspace/vagrant/squeeze64lamp52/Vagrantfile .; cp -r ~/workspace/vagrant/squeeze64lamp52/scripts ."
+      alias vafy3="cp -r ~/workspace/vagrant/precise64lamp-solr46/Vagrantfile .; cp -r ~/workspace/vagrant/precise64lamp-solr46/scripts ."
 
   ## helpers & tweaks
 
@@ -112,12 +98,6 @@
 
   # Grep alias
     alias grep="grep -rn --color --exclude-dir=.svn"
-
-  ## navigation
-    alias cdd="cd ~/Downloads/"
-    alias cds="cd ~/Sites/"
-    alias cdw="cd ~/Workspace/"
-    alias dcl13="cd ~/Workspace/DCL13"
 
   ## system
     alias cpu="top -F -R -o cpu" # display top CPU processes
