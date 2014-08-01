@@ -25,17 +25,15 @@
 
     #### vagrant
         alias vlog="VAGRANT_LOG=INFO "
-        alias vup="vagrant up"
+        alias vup="sudo echo Thanks! && vagrant up"
         alias vssh="vagrant ssh"
         alias vha="vagrant halt"
         alias vsu="vagrant suspend"
         alias vre="vagrant reload"
-        alias vst="vagrant status"
+        alias vst="vagrant global-status"
         alias vde="vagrant destroy -f"
         alias vcpu='cd ~/workspace/vagrant/ && git pull'
         alias vcp='_() { cp -r ~/workspace/vagrant/$1/Vagrantfile .; cp -r ~/workspace/vagrant/$1/scripts . ; }; _'
-        alias vcp53='cp -r ~/workspace/vagrant/precise64lamp/Vagrantfile .; cp -r ~/workspace/vagrant/precise64lamp/scripts .;'
-        alias vcp52='cp -r ~/workspace/vagrant/squeeze64lamp52/Vagrantfile .; cp -r ~/workspace/vagrant/squeeze64lamp52/scripts .;'
         alias dv="drush @vagrant1"
 
 
@@ -67,11 +65,18 @@
   ## custom scripts
 
     ### vagrant
-      alias vafy1="cp -r ~/workspace/vagrant/precise64lamp/Vagrantfile .; cp -r ~/workspace/vagrant/precise64lamp/scripts ."
-      alias vafy2="cp -r ~/workspace/vagrant/squeeze64lamp52/Vagrantfile .; cp -r ~/workspace/vagrant/squeeze64lamp52/scripts ."
-      alias vafy3="cp -r ~/workspace/vagrant/precise64lamp-solr46/Vagrantfile .; cp -r ~/workspace/vagrant/precise64lamp-solr46/scripts ."
-
-  ## helpers & tweaks
+      # PHP-5.3 & Solr 3.6
+      alias vafy1="cp -r ~/workspace/vagrant/precise-php53-solr36/Vagrantfile .; cp -r ~/workspace/vagrant/scripts .; cp -r ~/workspace/vagrant/precise-php53-solr36/scripts ."
+      # PHP-5.3 & Solr 4.6
+      alias vafy2="cp -r ~/workspace/vagrant/precise-php53-solr46/Vagrantfile .; cp -r ~/workspace/vagrant/scripts .; cp -r ~/workspace/vagrant/precise-php53-solr46/scripts ."
+      # PHP-5.5 & Solr 3.6
+      alias vafy3="cp -r ~/workspace/vagrant/precise-php53-solr36/Vagrantfile .; cp -r ~/workspace/vagrant/scripts .; cp -r ~/workspace/vagrant/precise-php53-solr36/scripts ."
+      # PHP-5.5 & Solr 4.6
+      alias vafy4="cp -r ~/workspace/vagrant/precise-php53-solr36/Vagrantfile .; cp -r ~/workspace/vagrant/scripts .; cp -r ~/workspace/vagrant/precise-php53-solr36/scripts ."
+        ## helpers & tweakslfresco + PHP-5.3 & Solr 4.6
+      alias vafy5="cp -r ~/workspace/vagrant/centos-alfresco/Vagrantfile .; cp -r ~/workspace/vagrant/centos-alfresco/alfresco_scripts .; cp -r ~/workspace/vagrant/scripts .; cp -r ~/workspace/vagrant/centos-alfresco/scripts ."
+      # Carrefour My Invoice
+      alias vafy6="cp -r ~/workspace/vagrant/myinvoice/Vagrantfile .; cp -r ~/workspace/vagrant/scripts .; cp -r ~/workspace/vagrant/myinvoice/scripts ."
 
     ### list and search 
     alias ali="alias"
@@ -79,6 +84,7 @@
     alias etcexg="less /etc/exports | grep"
     alias etchog="less /etc/hosts | grep"
     alias lbahg="less .bash_history | grep"
+    alias hosts="sudo vi /etc/hosts"
 
     ### list directory content
     alias ll="clear; pwd; ls -lah"

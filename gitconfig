@@ -19,7 +19,7 @@ st = status
 co = checkout
 
 [push]
-default = tracking
+	default = current
 
 [branch]
 autosetuprebase = always
