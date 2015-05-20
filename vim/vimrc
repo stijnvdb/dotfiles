@@ -1,16 +1,52 @@
-filetype indent on
 syntax on
+filetype plugin indent on
+
+" reload .vimrc every time it's written
+au! BufWritePost $MYVIMRC source $MYVIMRC
+
+" Remove any trailing whitespace that is in the file
+autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+
+" powerline: https://github.com/Lokaltog/powerline
+"python from powerline.ext.vim import source_plugin; source_plugin()
+
 set ruler
 set expandtab
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set smartindent
+set autoindent
+set visualbell
 set title
 set hlsearch
 set incsearch
 set paste
 set number
+set ttyfast            " smooth
+
 nmap <silent> <C-N> :silent noh<CR>
-filetype plugin on 
+filetype plugin on
 set ofu=syntaxcomplete#Complete
-set tabstop=2
+
+" Enable mouse support in console
+"set mouse=a
+
+" always show the status line, even with a single file open
+set laststatus=2
+
+" searching
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+
+
+
+" Change cursor shape between insert and normal mode in iTerm2.app
+" Source: http://hamberg.no/erlend/posts/2014-03-09-change-vim-cursor-in-iterm.html
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif

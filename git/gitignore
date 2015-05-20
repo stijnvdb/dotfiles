@@ -1,0 +1,27 @@
+# OS specific files
+*.DS_Store
+*.Spotlight-V100
+*.Trashes
+
+# app specific files
+*bbprojectd
+*nbproject
+*.sublime*
+.idea
+
+# user specific Drupal setting files
+settings.php*
+
+# Vagrant specific Drupal settings
+*www/sites/default/default.settings.php
+*www/sites/default/settings.php
+*www/sites/default/files
+
+# Vagrant and related files
+.vagrant*
+*Vagrantfile
+*Vagrantfile.box
+scripts/
+
+# db's
+*db/*
