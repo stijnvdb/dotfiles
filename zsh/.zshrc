@@ -103,9 +103,10 @@
     zstyle ':completion:*:hosts' hosts $_ssh_config
 
     # GIT completion config.
-    zstyle -T ':completion:*:*:git:*' tag-order && \
-    zstyle ':completion:*:*:git:*' tag-order 'common-commands'
-    
+    #zstyle -T ':completion:*:*:git:*' tag-order && \
+    #zstyle ':completion:*:*:git:*' tag-order 'common-commands'
+    zstyle ':completion:::git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
+
   ## Parameters used by Vagrant
 
     # Docs: http://docs.vagrantup.com/v2/cli/index.html
