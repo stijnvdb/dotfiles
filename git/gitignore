@@ -13,15 +13,16 @@
 settings.php*
 
 # Vagrant specific Drupal settings
-*www/sites/default/default.settings.php
+*wwww/sites/default/settings.php.backup
 *www/sites/default/settings.php
 *www/sites/default/files
+*www/sites/default/private
 
 # Vagrant and related files
 .vagrant*
-*Vagrantfile
-*Vagrantfile.box
-scripts/
+#*Vagrantfile
+#*Vagrantfile.box
+#scripts/
 
 # db's
-*db/*
+*db/*.sql*

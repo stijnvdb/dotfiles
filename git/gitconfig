@@ -6,9 +6,9 @@ email = stijn.vanden.brande@wunderkraut.com
 windowMemory = 256m
 
 [core]
-	excludesfile = /Users/stijn/.gitignore
-	fileMode = false
-editor = vi
+  excludesfile = /Users/stijn/.gitignore
+  fileMode = false
+  editor = vi
 
 [color]
   diff = auto
@@ -23,10 +23,16 @@ editor = vi
   untracked = cyan
 
 [alias]
-	br = branch
-	st = status
-	co = checkout
-	unpushed = diff origin/master..HEAD --name-status
+  a = add                           # add
+  br = branch
+  chunkyadd = add --patch           # stage commits chunk by chunk
+  st = status
+  co = checkout
+  unpushed = diff origin/master..HEAD --name-status
+
+  # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+  snapshots = !git stash list --grep snapshot
 
 [push]
 	default = current
@@ -36,6 +42,9 @@ editor = vi
 
 [http]
 	sslVerify = false
+	postBuffer = 2M
 
 [diff]
 	renames = 0
+[credential]
+	helper = osxkeychain
