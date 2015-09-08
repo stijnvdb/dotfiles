@@ -11,7 +11,7 @@
 ## cd
 # Change directory commands, mostly custom
   alias cdd="cd ~/Downloads/"
-  #alias cds="cd ~/Sites/ && clear && ll"
+  alias cds="cd ~/Sites/ && clear && ll"
   alias cdw="cd ~/workspace/ && clear && ll"
 
 ## git
@@ -35,6 +35,8 @@
   alias gl="git log --name-status"
   alias gcl+="git log --pretty=format:'* %h by %an:%d %s' --abbrev-commit"
   alias gtl="git show-branch --all"
+  alias gsi="git submodule init"
+  alias gsu="git submodule update"
   alias pushall='for i in `git remote`; do git push $i; done;'
   alias pullall='for i in `git remote`; do git pull $i; done;'
 
@@ -70,9 +72,9 @@
 
 ## drush + vagrant
 # Helper aliases for drush on vagrant instances
-  alias dv="drush @vagrant1"
-  alias dvpw="drush @vagrant1 upwd admin --password='admin'"
-  alias dvdb="drush @vagrant1 sql-dump --result-file=/home/vagrant/db/vagrant-sql-dump.sql"
+  alias dv="drush @vagrant"
+  alias dvpw="drush @vagrant upwd admin --password='admin'"
+  alias dvdb="drush @vagrant sql-dump --result-file=/home/vagrant/db/vagrant-sql-dump.sql"
 
 ## Virtualbox
 # Helper aliases for Virtualbox
