@@ -95,6 +95,11 @@
     zstyle ':completion:*' menu select=0
     zstyle ':completion:*' original true
     zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+    # ssh host completion based on http://unix.stackexchange.com/a/52142
+    zstyle -s ':completion:*:hosts' hosts _ssh_config
+    [[ -r ~/.ssh/config ]] && _ssh_config+=($(cat ~/.ssh/config | sed -ne 's/Host[=\t ]//p'))
+    zstyle ':completion:*:hosts' hosts $_ssh_config
+    # end ssh completion
     zstyle :compinstall filename '/Users/stijn/.zshrc'
 
     # SSH completion config.
