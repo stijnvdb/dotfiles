@@ -60,7 +60,7 @@
 
 ## vagrant
 # Helper aliases for vagrant
-  alias vafy='~/workspace/vagrant/vafy.sh ~/workspace/vagrant'
+  alias vafy='~/workspace/WBE_vagrant/vafy.sh ~/workspace/WBE_vagrant'
   alias vup="vagrant up"
   alias vssh="vagrant ssh"
   alias vha="vagrant halt"
