@@ -1,6 +1,6 @@
 [user]
 name = Stijn Vanden Brande
-email = stijn.vanden.brande@wunderkraut.com
+email = stijn.v.brande@gmail.com
 
 [pack]
 windowMemory = 256m
@@ -37,14 +37,9 @@ windowMemory = 256m
 [push]
 	default = current
 
-[branch]
-	autosetuprebase = always
-
 [http]
 	sslVerify = false
 	postBuffer = 2M
 
 [diff]
 	renames = 0
-[credential]
-	helper = osxkeychain
