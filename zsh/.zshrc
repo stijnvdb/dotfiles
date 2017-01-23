@@ -58,7 +58,7 @@
     # but it is typically present in the environment anyway, and if it becomes set it has its usual special behaviour.
     # Note that altering this to `~` may result in unextpected behaviour.
     # Also note that this should be set before the HISTFILE parameter is set.
-    HOME="/Users/stijn/"
+    HOME="/home/stijn/"
 
     # File where history is saved.
     # Note that using ~/.zsh_history will fail.
@@ -78,7 +78,7 @@
     export PATH="$HOME/.composer/vendor/bin:$PATH"
 
     # Completion config.
-    zstyle :compinstall filename '/Users/stijn/.zshrc'
+    zstyle :compinstall filename '/home/stijn/.zshrc'
     zstyle ':completion:*' use-cache off
     zstyle ':completion:*' cache-path ~/.zsh/cache
     zstyle ':completion:*' max-errors 1 numeric
@@ -100,7 +100,7 @@
     [[ -r ~/.ssh/config ]] && _ssh_config+=($(cat ~/.ssh/config | sed -ne 's/Host[=\t ]//p'))
     zstyle ':completion:*:hosts' hosts $_ssh_config
     # end ssh completion
-    zstyle :compinstall filename '/Users/stijn/.zshrc'
+    zstyle :compinstall filename '/home/stijn/.zshrc'
 
     # SSH completion config.
     zstyle -s ':completion:*:hosts' hosts _ssh_config
