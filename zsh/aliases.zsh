@@ -85,7 +85,7 @@
 ## (neo)Vi(m)
 
   # 21st century vi
-  alias vi="nvim"
+  alias vi="vim"
 
 ## zsh
 # Helper aliases for zsh
